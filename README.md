@@ -8,17 +8,21 @@ It must be build with NodeJS for BE and any kind of JS Frameworks for FE.
 
 **CHANGE TO DIRECTORY**
 
-`cd/client`
+`cd client`
 
 **INSTALL DEPEDENCIES & PACKAGES**
 
 `npm install`
 
-## **SERVER 🗃️ **
+**RUN APP**
+
+`npm run dev`
+
+## **SERVER 🗃️**
 
 **CHANGE TO DIRECTORY**
 
-`cd/server`
+`cd server`
 
 **INSTALL DEPEDENCIES & PACKAGES**
 
@@ -43,8 +47,9 @@ const dataBuffer: Buffer = fs.readFileSync("test/sample.pdf");
 The result will showed up on the terminal with a specific format, here's is the result:
 
 ```bash
-{
-  H: { 'H.1 Nomor:': '', 'H.2 Pembetulan Ke-': '0' },
+Required Extracted Data ✨: 
+ {
+  H: { 'H.1 Nomor:': '3000000010', 'H.2 Pembetulan Ke-': '0' },
   A: {
     'A.1 NPWP': '704511111011000/0704511111011000',
     'A.2 NIK': '',
@@ -72,7 +77,7 @@ The result will showed up on the terminal with a specific format, here's is the 
     'C.1 NPWP': '929333330303000/0929333330303000',
     'C.2 NITKU': '0929333330303000000000',
     'C.3 Nama Wajib Pajak': 'JAYA RAYA',
-    'C.4 Tanggal': '10-09-2024',
+    'C.4 Tanggal': '01-90-2024',
     'C.5 Nama Penandatangan': 'HARTONO'
   }
 }
