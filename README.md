@@ -8,31 +8,43 @@ It must be build with NodeJS for BE and any kind of JS Frameworks for FE.
 
 **CHANGE TO DIRECTORY**
 
-`cd client`
+```bash
+cd client
+```
 
 **INSTALL DEPEDENCIES & PACKAGES**
 
-`npm install`
+```bash
+npm install
+```
 
 **RUN APP**
 
-`npm run dev`
+```bash
+npm run dev
+```
 
 ## **SERVER 🗃️**
 
 **CHANGE TO DIRECTORY**
 
-`cd server`
+```bash
+cd server
+```
 
 **INSTALL DEPEDENCIES & PACKAGES**
 
-`npm install`
+```bash
+npm install
+```
 
 There are two type to run this app either you want to run it as API or LOCAL you can choose what you want depends on what you prefer:
 
 **A. RUN API SERVER**
 
-`npm start`
+```bash
+npm start
+```
 
 **B. RUN LOCAL EXTRACTION**
 
