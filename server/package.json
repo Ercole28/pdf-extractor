@@ -1,0 +1,34 @@
+{
+  "name": "backend-technical-test",
+  "version": "1.0.0",
+  "description": "PT. SISI Technical Test",
+  "main": "index.ts",
+  "scripts": {
+    "start": "nodemon --exec ts-node index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "extract-pdf-value"
+  ],
+  "author": "Bradley Andrew Ercole",
+  "license": "ISC",
+  "dependencies": {
+    "@types/multer": "^1.4.12",
+    "@types/pdfkit": "^0.13.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "pdf.js-extract": "^0.2.1",
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
