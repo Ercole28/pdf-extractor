@@ -75,7 +75,15 @@ pdfExtract.extractBuffer(
     // Process & Log the Required Extracted Data
     const requiredExtractedData: RequiredExtractedData = {
       H: {
-        "H.1 Nomor:": "",
+        "H.1 Nomor:": getValueWithCoordinateRange({
+          data: transformedContentData,
+          x2ValueUnknown: false,
+          x1: 248.85,
+          x2: 367.9,
+          y1: 92.7,
+          y2: 104.7,
+          separator: "",
+        }),
         "H.2 Pembetulan Ke-": getValueWithCoordinateRange({
           data: transformedContentData,
           x2ValueUnknown: false,
@@ -173,52 +181,45 @@ pdfExtract.extractBuffer(
           Tanggal: "",
         },
         "B.8 Dokumen Referensi untuk Faktur Pajak, apabila ada:": {
-          "Nomor Faktur Pajak": transformedContentData
-            .filter(
-              (item) =>
-                item.position.y >= 362.6 &&
-                item.position.y <= 374.6 &&
-                item.position.x >= 122 &&
-                item.position.x <= 190
-            )
-            .map((item) => item.text)
-            .join(""),
+          "Nomor Faktur Pajak": getValueWithCoordinateRange({
+            data: transformedContentData,
+            x2ValueUnknown: false,
+            x1: 122,
+            x2: 190,
+            y1: 362.6,
+            y2: 374.6,
+            separator: "",
+          }),
           Tanggal:
-            transformedContentData
-              .filter(
-                (item) =>
-                  item.position.y >= 362.6 &&
-                  item.position.y <= 374.6 &&
-                  item.position.x >= 362.4 &&
-                  item.position.x <= 386.4
-              )
-              .sort((a, b) => a.position.x - b.position.x)
-              .map((item) => item.text)
-              .join("") +
+            getValueWithCoordinateRange({
+              data: transformedContentData,
+              x2ValueUnknown: false,
+              x1: 362.4,
+              x2: 386.4,
+              y1: 362.6,
+              y2: 374.6,
+              separator: "",
+            }) +
             "-" +
-            transformedContentData
-              .filter(
-                (item) =>
-                  item.position.y >= 362.6 &&
-                  item.position.y <= 374.6 &&
-                  item.position.x >= 421.42 &&
-                  item.position.x <= 445.42
-              )
-              .sort((a, b) => a.position.x - b.position.x)
-              .map((item) => item.text)
-              .join("") +
+            getValueWithCoordinateRange({
+              data: transformedContentData,
+              x2ValueUnknown: false,
+              x1: 421.42,
+              x2: 445.42,
+              y1: 362.6,
+              y2: 374.6,
+              separator: "",
+            }) +
             "-" +
-            transformedContentData
-              .filter(
-                (item) =>
-                  item.position.y >= 362.6 &&
-                  item.position.y <= 374.6 &&
-                  item.position.x >= 482.45 &&
-                  item.position.x <= 530.45
-              )
-              .sort((a, b) => a.position.x - b.position.x)
-              .map((item) => item.text)
-              .join(""),
+            getValueWithCoordinateRange({
+              data: transformedContentData,
+              x2ValueUnknown: false,
+              x1: 482.45,
+              x2: 530.45,
+              y1: 362.6,
+              y2: 374.6,
+              separator: "",
+            }),
         },
         "B.9 PPh dibebankan berdasarkan Surat Keterangan Bebas (SKB)": {
           Nomor: "",
@@ -231,54 +232,72 @@ pdfExtract.extractBuffer(
           "",
       },
       C: {
-        "C.1 NPWP": transformedContentData
-          .filter((item) => item.position.y === 514.37)
-          .map((item) => item.text)
-          .join(""),
-        "C.2 NITKU": transformedContentData
-          .filter((item) => item.position.y === 529.37 && item.text !== "C.2")
-          .map((item) => item.text)
-          .join(""),
-        "C.3 Nama Wajib Pajak": transformedContentData[39]?.text || "",
+        "C.1 NPWP": getValueWithCoordinateRange({
+          data: transformedContentData,
+          x2ValueUnknown: true,
+          x1: 172.83,
+          y1: 508.37,
+          y2: 520.37,
+          separator: "",
+        }),
+        "C.2 NITKU": getValueWithCoordinateRange({
+          data: transformedContentData,
+          x2ValueUnknown: true,
+          x1: 178.83,
+          y1: 523.37,
+          y2: 535.37,
+          separator: "",
+        }),
+        "C.3 Nama Wajib Pajak": getValueWithCoordinateRange({
+          data: transformedContentData,
+          x2ValueUnknown: true,
+          x1: 172.83,
+          y1: 538.37,
+          y2: 550.37,
+          separator: "",
+        }),
         "C.4 Tanggal":
-          transformedContentData
-            .filter(
-              (item) =>
-                item.position.y >= 554 &&
-                item.position.y <= 566 &&
-                item.position.x >= 183 &&
-                item.position.x <= 201
-            )
-            .sort((a, b) => a.position.x - b.position.x)
-            .map((item) => item.text)
-            .join("") +
+          getValueWithCoordinateRange({
+            data: transformedContentData,
+            x2ValueUnknown: false,
+            x1: 183,
+            x2: 201,
+            y1: 554,
+            y2: 566,
+            separator: "",
+          }) +
           "-" +
-          transformedContentData
-            .filter(
-              (item) =>
-                item.position.y >= 554 &&
-                item.position.y <= 566 &&
-                item.position.x >= 226 &&
-                item.position.x <= 250
-            )
-            .sort((a, b) => a.position.x - b.position.x)
-            .map((item) => item.text)
-            .join("") +
+          getValueWithCoordinateRange({
+            data: transformedContentData,
+            x2ValueUnknown: false,
+            x1: 226,
+            x2: 250,
+            y1: 554,
+            y2: 566,
+            separator: "",
+          }) +
           "-" +
-          transformedContentData
-            .filter(
-              (item) =>
-                item.position.y >= 554 &&
-                item.position.y <= 566 &&
-                item.position.x >= 277 &&
-                item.position.x <= 325
-            )
-            .sort((a, b) => a.position.x - b.position.x)
-            .map((item) => item.text)
-            .join(""),
-        "C.5 Nama Penandatangan": transformedContentData[43]?.text || "",
+          getValueWithCoordinateRange({
+            data: transformedContentData,
+            x2ValueUnknown: false,
+            x1: 277,
+            x2: 325,
+            y1: 554,
+            y2: 566,
+            separator: "",
+          }),
+        "C.5 Nama Penandatangan": getValueWithCoordinateRange({
+          data: transformedContentData,
+          x2ValueUnknown: false,
+          x1: 172.83,
+          x2: 184.83,
+          y1: 564.4,
+          y2: 578.4,
+          separator: "",
+        }),
       },
     };
-    console.log("Required Extracted Data ✨: ", requiredExtractedData);
+
+    console.log("Required Extracted Data ✨: \n", requiredExtractedData);
   }
 );
