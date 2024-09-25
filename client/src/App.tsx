@@ -53,6 +53,10 @@ function App() {
     setSelectedFile(null);
     setIsExtractSuccess(false);
     setDownloadURL("");
+    const fileInput = document.getElementById("pdf") as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = "";
+    }
   };
 
   return (
