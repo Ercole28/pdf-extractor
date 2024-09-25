@@ -54,30 +54,29 @@ Example API Result of /extract-pdf route:
     "data": {
         "raw": {
             "H": {
-                "H.1 Nomor:": "3000000010",
+                "H.1 Nomor:": "2000002350",
                 "H.2 Pembetulan Ke-": "0"
             },
             "A": {
-                "A.1 NPWP": "704511111011000/0704511111011000",
+                "A.1 NPWP": "027957026019000",
                 "A.2 NIK": "",
-                "A.3 NITKU": "0704511111011000000000",
-                "A.4 Nama": "SINERGI INFORMATIKA SEMEN INDONESIA"
+                "A.3 Nama": "SENTRAL MITRA INFORMATIKA Tbk"
             },
             "B": {
-                "B.1 Masa-Pajak (mm-yyyy)": "8-2024",
-                "B.2 Kode Objek Pajak": "24-104-24",
-                "B.3 Dasar Pengenaan Pajak (Rp)": "1.948.650,00",
+                "B.1 Masa-Pajak (mm-yyyy)": "03-2023",
+                "B.2 Kode Objek Pajak": "24-100-02",
+                "B.3 Dasar Pengenaan Pajak (Rp)": "2,030,000",
                 "B.4 Dikenakan Tarif Lebih Tinggi (Tidak memiliki NPWP)": "",
                 "B.5 Tarif (%)": "2.00",
-                "B.6 PPh yang Dipotong/Dipungut/DTP (Rp)": "38.973,00",
+                "B.6 PPh yang Dipotong/Dipungut/DTP (Rp)": "40,600",
                 "B.7 Dokumen Referensi": {
                     "Nomor Dokumen": "",
                     "Nama Dokumen": "",
                     "Tanggal": ""
                 },
                 "B.8 Dokumen Referensi untuk Faktur Pajak, apabila ada:": {
-                    "Nomor Faktur Pajak": "010.006-24.22222222",
-                    "Tanggal": "24-08-2024"
+                    "Nomor Faktur Pajak": "0100012386501338",
+                    "Tanggal": "01-03-2023"
                 },
                 "B.9 PPh dibebankan berdasarkan Surat Keterangan Bebas (SKB)": {
                     "Nomor": "",
@@ -88,14 +87,13 @@ Example API Result of /extract-pdf route:
                 "B.12 PPh yang dipotong/dipungut yang diberikan fasilitas PPh berdasarkan: ": ""
             },
             "C": {
-                "C.1 NPWP": "929333330303000/0929333330303000",
-                "C.2 NITKU": "0929333330303000000000",
-                "C.3 Nama Wajib Pajak": "JAYA RAYA",
-                "C.4 Tanggal": "01-90-2024",
-                "C.5 Nama Penandatangan": "HARTONO"
+                "C.1 NPWP": "011405081092000",
+                "C.2 Nama Wajib Pajak": "SARIHUSADA GENERASI MAHARDHIKA",
+                "C.3 Tanggal": "08-03-2023",
+                "C.4 Nama Penandatangan": "VERA GALUH SUGIJANTO"
             }
         },
-        "downloadURL": "localhost:4000/download/extracted-cb72e211-95a8-4a57-9817-2166825caf8d-sample-processed.pdf"
+        "downloadURL": "localhost:4000/download/extracted-62375150-e953-4968-ab27-06e65e0762b0-new-sample.pdf"
     }
 }
 ```
