@@ -2,6 +2,7 @@
 import fs from "fs";
 import dotenv from "dotenv";
 import express, { Request, Response } from "express";
+import cors from "cors";
 import multer from "multer";
 import pdfExtractor from "./utils/pdfExtractor";
 import PDFDocument from "pdfkit";
@@ -15,6 +16,8 @@ import { RequiredExtractedData } from "./typings/all";
 // | ---- App ✨ ---- |
 const app = express();
 const port: number = parseInt(process.env.APP_PORT || "4000", 10);
+app.use(cors());
+
 app.get("/", (req: Request, res: Response) => {
   res.json({
     message: `Welcome to ${process.env.APP_NAME} app's API endpoint 👋`,
