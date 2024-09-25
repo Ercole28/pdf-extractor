@@ -87,12 +87,7 @@ app.post(
         });
       doc
         .font("Helvetica")
-        .text(`A.3 NITKU: ${requiredExtractedData.A["A.3 NITKU"]}`, {
-          indent: 20,
-        });
-      doc
-        .font("Helvetica")
-        .text(`A.4 Nama: ${requiredExtractedData.A["A.4 Nama"]}`, {
+        .text(`A.3 Nama: ${requiredExtractedData.A["A.3 Nama"]}`, {
           indent: 20,
         });
       // Section B
@@ -227,26 +222,21 @@ app.post(
         });
       doc
         .font("Helvetica")
-        .text(`C.2 NITKU: ${requiredExtractedData.C["C.2 NITKU"]}`, {
-          indent: 20,
-        });
-      doc
-        .font("Helvetica")
         .text(
-          `C.3 Nama Wajib Pajak: ${requiredExtractedData.C["C.3 Nama Wajib Pajak"]}`,
+          `C.2 Nama Wajib Pajak: ${requiredExtractedData.C["C.2 Nama Wajib Pajak"]}`,
           {
             indent: 20,
           }
         );
       doc
         .font("Helvetica")
-        .text(`C.4 Tanggal: ${requiredExtractedData.C["C.4 Tanggal"]}`, {
+        .text(`C.3 Tanggal: ${requiredExtractedData.C["C.3 Tanggal"]}`, {
           indent: 20,
         });
       doc
         .font("Helvetica")
         .text(
-          `C.5 Nama Penandatangan: ${requiredExtractedData.C["C.5 Nama Penandatangan"]}`,
+          `C.4 Nama Penandatangan: ${requiredExtractedData.C["C.4 Nama Penandatangan"]}`,
           {
             indent: 20,
           }

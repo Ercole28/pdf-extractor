@@ -106,10 +106,10 @@ Example API Result of /extract-pdf route:
 ts-node test/generateOutputFromSample.ts
 ```
 
-You can add your pdf file into test directory and change this code block, by default it's sample.pdf:
+You can add your pdf file into test directory and change this code block, by default it's new-sample.pdf:
 
 ```typescript
-const dataBuffer: Buffer = fs.readFileSync("test/sample.pdf");
+const dataBuffer: Buffer = fs.readFileSync("test/new-sample.pdf");
 ```
 
 The result will showed up on the terminal with a specific format, here's is example the result:
@@ -117,36 +117,31 @@ The result will showed up on the terminal with a specific format, here's is exam
 ```bash
 Required Extracted Data ✨: 
  {
-  H: { 'H.1 Nomor:': '3000000010', 'H.2 Pembetulan Ke-': '0' },
+  H: { 'H.1 Nomor:': '2000002350', 'H.2 Pembetulan Ke-': '0' },
   A: {
-    'A.1 NPWP': '704511111011000/0704511111011000',
+    'A.1 NPWP': '027957026019000',
     'A.2 NIK': '',
-    'A.3 NITKU': '0704511111011000000000',
-    'A.4 Nama': 'SINERGI INFORMATIKA SEMEN INDONESIA'
+    'A.3 Nama': 'SENTRAL MITRA INFORMATIKA Tbk'
   },
   B: {
-    'B.1 Masa-Pajak (mm-yyyy)': '8-2024',
-    'B.2 Kode Objek Pajak': '24-104-24',
-    'B.3 Dasar Pengenaan Pajak (Rp)': '1.948.650,00',
+    'B.1 Masa-Pajak (mm-yyyy)': '03-2023',
+    'B.2 Kode Objek Pajak': '24-100-02',
+    'B.3 Dasar Pengenaan Pajak (Rp)': '2,030,000',
     'B.4 Dikenakan Tarif Lebih Tinggi (Tidak memiliki NPWP)': '',
     'B.5 Tarif (%)': '2.00',
-    'B.6 PPh yang Dipotong/Dipungut/DTP (Rp)': '38.973,00',
+    'B.6 PPh yang Dipotong/Dipungut/DTP (Rp)': '40,600',
     'B.7 Dokumen Referensi': { 'Nomor Dokumen': '', 'Nama Dokumen': '', Tanggal: '' },
-    'B.8 Dokumen Referensi untuk Faktur Pajak, apabila ada:': {
-      'Nomor Faktur Pajak': '010.006-24.22222222',
-      Tanggal: '24-08-2024'
-    },
+    'B.8 Dokumen Referensi untuk Faktur Pajak, apabila ada:': { 'Nomor Faktur Pajak': '0100012386501338', Tanggal: '01-03-2023' },
     'B.9 PPh dibebankan berdasarkan Surat Keterangan Bebas (SKB)': { Nomor: '', Tanggal: '' },
     'B.10 Ph yang ditanggung oleh Pemerintah (DTP) berdasarkan :': '',
     'B.11 PPh dalam hal transaksi menggunakan Surat Keterangan berdasarkan PP Nomor 23 Tahun 2018 dengan Nomor :': '',
     'B.12 PPh yang dipotong/dipungut yang diberikan fasilitas PPh berdasarkan: ': ''
   },
   C: {
-    'C.1 NPWP': '929333330303000/0929333330303000',
-    'C.2 NITKU': '0929333330303000000000',
-    'C.3 Nama Wajib Pajak': 'JAYA RAYA',
-    'C.4 Tanggal': '01-90-2024',
-    'C.5 Nama Penandatangan': 'HARTONO'
+    'C.1 NPWP': '011405081092000',
+    'C.2 Nama Wajib Pajak': 'SARIHUSADA GENERASI MAHARDHIKA',
+    'C.3 Tanggal': '08-03-2023',
+    'C.4 Nama Penandatangan': 'VERA GALUH SUGIJANTO'
   }
 }
 ```
